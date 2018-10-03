@@ -2,7 +2,7 @@
 <html lang="nb">
     <head>
         <meta charset="utf-8">
-        <title>Mal - Artikkel</title>
+        <title>Media Typer</title>
         <link rel="stylesheet" href="../stiler/stilark.css">
         <link rel="stylesheet" media="print" href="../stiler/print.css">
     </head>
@@ -16,8 +16,8 @@
                 <div class="dropdown">
                     <p>Oblig 2</p>
                     <div class="dropdown-knapper">
-                        <a href="mal-artikkel.html">Mal for artikkel</a>
                         <a href="Wireframe.html">Wireframe</a>
+                        <a href="mal-artikkel.html">Mal for artikkel</a>
                         <a href="git-github.html">Git / Github</a>
                         <a href="media-typer.html">Media Typer</a>
                         <a href="css-layouts.html">CSS Layouts</a>
@@ -55,30 +55,62 @@
                         <div class="artikkel-tekst-innhold">
                             <h1>Media Typer</h1>
                             <p><time datetime="2018-10-03">3. oktober 2018</time></p>
-                            <h2></h2>
-                            <p>
-                            
-                            </p>
                             <h2>Hva er mediatyper</h2>
                             <p>
-                            
+                                Media typer forteller hvilke enheter som en
+                                nettside vises i<a href="#kilde1" class="artikkel-sitering">[1]</a>. Disse media typene er for
+                                eksempel mobiltelefoner, PC-skjermer, prosjektorer
+                                og utskrift på papir. Det finnes en del media typer.
+                                Her er en liste over noen av dem:
                             </p>
-                            <h2>Fordeler og ulemper</h2>
+                            <ul>
+                                <li><p>All: Dette er standard media typen, som gjelder hvis man ikke spesifiserer noe annet<a href="#kilde1" class="artikkel-sitering">[1]</a>.</p></li>
+                                <li><p>Screen: Denne spesifiserer at nettsiden vises på en skjerm<a href="#kilde1" class="artikkel-sitering">[1]</a>.</p></li>
+                                <li><p>Handheld: Brukes for håndholdte enheter, som mobiler og nettbrett<a href="#kilde1" class="artikkel-sitering">[1]</a>.</p></li>
+                                <li><p>Print: Brukes for utskrifter<a href="#kilde1" class="artikkel-sitering">[1]</a>.</p></li>
+                                <li><p>Projection: Brukes for prosjektorer<a href="#kilde1" class="artikkel-sitering">[1]</a>.</p></li>
+                            </ul>
                             <p>
-
+                                Man kan bruke media typer for å gi nettsiden
+                                forskjellig utseende på ulike enheter<a href="#kilde2" class="artikkel-sitering">[2]</a>. Hvis man,
+                                for eksempel, vil skrive ut en nettside, vil man
+                                ikke ha med menyene, fordi de ikke brukes til noe
+                                på et papir. Da kan man spesifisere det i CSS slik:
                             </p>
+                            <!-- Teksten inne i pre-taggen må skrives slik for å ikke få et
+                            stort mellomrom på venstre side av kodeeksempelet -->
+                            <pre>
+                                <code>
+        @media print {
+            nav {
+                display: none;
+            }
+        }
+                                </code>
+                            </pre>
                             <h2>Hvorfor noen medietyper ikke brukes lenger</h2>
+                            <p>
+                                Problemet med å spesifisere mange ulike media typer i CSS,
+                                er at det fort blir mye CSS å styre med. I CSS3 ble det introdusert
+                                media queries, som kunne sjekke enhetens bredde, høyde og oppløsning<a href="#kilde2" class="artikkel-sitering">[2]</a>.
+                                Dette gjorde det mye enklere å designe nettsiden så den så bra ut på enheter
+                                med ulike størrelser. Media queries, sammen med et fleksibelt oppsett,
+                                er med på å lage et responsivt design<a href="#kilde3" class="artikkel-sitering">[3]</a>. Responsivt design har ført til
+                                at noen av media typene nevnt ovenfor, som handheld og projection, ikke
+                                er like mye brukt nå lenger.
+                            </p>
                         </div>
                         <figure class="artikkel-bilde">
-                            <img src="../bilder/13.jpg" alt="Moderne Webdesign">
-                            <figcaption><a class="link" href="https://www.freepik.com/free-vector/modern-responsive-web-design-on-all-mobile-devices_1310856.htm#term=modern%20web%20design%20iconicbestiary&page=1&position=0">Modern Web Design. Laget av Iconicbestiary - Freepik. Hentet 1. oktober 2018</a></figcaption>
+                            <img src="../bilder/13.jpg" alt="Illustrasjon av ulike enheter.">
+                            <figcaption>Ulike enheter som nettsider vises i. <a class="link" href="https://www.freepik.com/free-vector/modern-responsive-web-design-on-all-mobile-devices_1310856.htm#term=modern%20web%20design%20iconicbestiary&page=1&position=0" target="_blank">Laget av Iconicbestiary - Freepik. Hentet 1. oktober 2018</a></figcaption>
                         </figure>
                     </section>
                     <section class="artikkel-kilder">
                         <h2>Referanseliste</h2>
                         <ol>
-                            <li><a class="link" href="">Kilde 1</a></li>
-                            <li><a class="link" href="">Kilde 2</a></li>
+                            <li id="kilde1" class="artikkel-kilde">JavaScript Kit. <a class="link" href="http://www.javascriptkit.com/dhtmltutors/cssmedia.shtml">CSS Media types and printer friendly pages.</a> Hentet <time datetime="2018-10-03">3. oktober 2018</time></li>
+                            <li id="kilde2" class="artikkel-kilde">W3Schools. <a class="link" href="https://www.w3schools.com/css/css3_mediaqueries.asp ">CSS Media Queries.</a> Hentet <time datetime="2018-10-03">3. oktober 2018</time></li>
+                            <li id="kilde3" class="artikkel-kilde">Smashing Magazine. <time datetime="2011-01-12">(12. januar 2011)</time>. <a class="link" href="https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/">Responsive Web Design - What It Is And How To Use It.</a> Hentet <time datetime="2018-10-03">3. oktober 2018</time></li>
                         </ol>
                     </section>
                 </article>

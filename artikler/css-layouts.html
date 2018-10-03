@@ -2,7 +2,7 @@
 <html lang="nb">
     <head>
         <meta charset="utf-8">
-        <title>Mal - Artikkel</title>
+        <title>CSS Layouts</title>
         <link rel="stylesheet" href="../stiler/stilark.css">
         <link rel="stylesheet" media="print" href="../stiler/print.css">
     </head>
@@ -16,8 +16,8 @@
                 <div class="dropdown">
                     <p>Oblig 2</p>
                     <div class="dropdown-knapper">
-                        <a href="mal-artikkel.html">Mal for artikkel</a>
                         <a href="Wireframe.html">Wireframe</a>
+                        <a href="mal-artikkel.html">Mal for artikkel</a>
                         <a href="git-github.html">Git / Github</a>
                         <a href="media-typer.html">Media Typer</a>
                         <a href="css-layouts.html">CSS Layouts</a>
@@ -55,33 +55,97 @@
                         <div class="artikkel-tekst-innhold">
                             <h1>CSS Layouts</h1>
                             <p><time datetime="2018-10-03">3. oktober 2018</time></p>
-                            <h2>Hva er CSS layouts?</h2>
+                            <h2>Layouts</h2>
                             <p>
-                            
+                                Oppsettet i en webside består hovedsakelig av en header,
+                                en meny, hovedinnhold, sideinnhold og en
+                                footer<a href="#kilde1" class="artikkel-sitering">[1]</a>.
+                                Det er mange måter å plassere dette på en nettside.
+                                Under beskriver jeg noen av de mest brukte metodene.
                             </p>
-                            <h2>Forskjellige typer layouts</h2>
+                            <h2>CSS Flexbox</h2>
                             <p>
-                            
+                                Flexbox er et endimensjonalt oppsett i CSS<a href="#kilde2" class="artikkel-sitering">[2]</a>.
+                                For å bruke flexbox, må vi sette <code>display: flex</code>
+                                på et innpakningselement<a href="#kilde2" class="artikkel-sitering">[2]</a>. Da vil elementene
+                                inne i det elementet legge seg i en rekke.
+                                Flexbox kan både gå vertikalt og horisontalt.
+                                For å bestemme hvilke retning må man sette en
+                                verdi for <code>flex-direction</code>. Man kan enten velge
+                                <code>row</code> eller <code>column</code><a href="#kilde2" class="artikkel-sitering">[2]</a>. Row er standardverdien.
+                                Det er også mulig å skrive <code>row-reverse</code> og <code>column-reverse</code>.
+                                Da vil elementene starte i motsatt ende og bevege
+                                seg i motsatt retning<a href="#kilde2" class="artikkel-sitering">[2]</a>. Hvis man har for
+                                mange elementer i innpakningselementet, vil elementene
+                                etter hvert bevege seg ut av innpakningen.
+                                For å bekjempe dette kan vi sette <code>flex-wrap: wrap</code>,
+                                for at innpakningen skal pakkes rundt elementene inni.
+                                Resultatet blir da at elementene vil legge seg under
+                                hverandre<a href="#kilde2" class="artikkel-sitering">[2]</a>. Vi kan kombinere <code>flex-direction</code> og <code>flex-wrap</code>,
+                                ved å bruke <code>flex-flow</code>. Da skriver man det slik
+                                <code>flex-flow: column wrap</code><a href="#kilde2" class="artikkel-sitering">[2]</a>.
                             </p>
-                            <h2>Fordeler og ulemper</h2>
+                            <h2>CSS Grid</h2>
                             <p>
-
+                                Grid er et todimensjonalt oppsett i CSS<a href="#kilde3" class="artikkel-sitering">[3]</a>. Vi må
+                                sette display: grid i innpakningselementet for at grid
+                                skal fungere. Grid oppsettet består av kolonner og
+                                rekker<a href="#kilde3" class="artikkel-sitering">[3]</a>. For å lage et grid-oppsett må man skrive inn
+                                hvor mange kolonner, og hvor mange rekker oppsettet skal
+                                bestå av. For å bestemme antall kolonner, skriver man
+                                grid-template-columns: 1fr 1fr 1fr. Dette vil gi oss tre
+                                kolonner. Enheten fr er en brøkdel av den ledige
+                                plassen<a href="#kilde3" class="artikkel-sitering">[3]</a>. For rader, skriver man grid-template-rows.
+                                Hvis man skal ha mange kolonner eller rader, kan det
+                                være lurt å bruke repeat()-funksjonen<a href="#kilde3" class="artikkel-sitering">[3]</a>. Hvis vi
+                                skal ha 12 kolonner, skriver vi det slik
+                                grid-template-columns: repeat(12, 1fr). Man kan
+                                også plassere de ulike elementene på siden ved
+                                bruke grid-template-areas<a href="#kilde3" class="artikkel-sitering">[3]</a>. Hvis man har et
+                                grid-oppsett med tre kolonner fire rader skriver
+                                man det slik:
                             </p>
-                            <h2>Hvorfor noen mediatyper ikke brukes lenger</h2>
+                            <pre>
+                                <code>
+        grid-template-areas:
+            "header header header"
+            "menu menu menu"
+            "main main aside"
+            "footer footer footer";
+                                </code>
+                            </pre>
                             <p>
-                                
+                                Deretter må man de gi hver av elementene hver sin verdi.
+                            </p>
+                            <pre>
+                                <code>
+            header {
+                grid-area: header;
+            }
+                                </code>
+                            </pre>
+                            <p>
+                                Header-elementet vil nå legge seg på toppen av siden.
+                            </p>
+                            <h2>Float</h2>
+                            <p>
+                                Før flexbox og grid, ble float brukt for å lage et oppsett
+                                ved å bruke float på elementene. Elementene vil da legge
+                                seg etter hverandre<a href="#kilde4" class="artikkel-sitering">[4]</a>.
                             </p>
                         </div>
                         <figure class="artikkel-bilde">
-                            <img src="" alt="">
-                            <figcaption><a class="link" href=""></a></figcaption>
+                            <img src="../bilder/layout.png" alt="En vanlig nettside-layout.">
+                            <figcaption>En vanlig nettside-layout.</figcaption>
                         </figure>
                     </section>
                     <section class="artikkel-kilder">
                         <h2>Referanseliste</h2>
                         <ol>
-                            <li><a class="link" href="">Kilde 1</a></li>
-                            <li><a class="link" href="">Kilde 2</a></li>
+                            <li id="kilde1">W3Schools. <a class="link" href="https://www.w3schools.com/Css/css_website_layout.asp">CSS Website Layout.</a> Hentet <time datetime="2018-10-03">3. oktober 2018</time></li>
+                            <li id="kilde2">Mozilla. <a class="link" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox.</a> Hentet <time datetime="2018-10-03">3. oktober 2018</time></li>
+                            <li id="kilde3">Mozilla. <a class="link" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids">Grids.</a> Hentet <time datetime="2018-10-03">3. oktober 2018</time></li>
+                            <li id="kilde4">Mozilla. <a class="link" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats.</a> Hentet <time datetime="2018-10-03">3. oktober 2018</time></li>
                         </ol>
                     </section>
                 </article>

@@ -2,7 +2,7 @@
 <html lang="nb">
     <head>
         <meta charset="utf-8">
-        <title>Mal - Artikkel</title>
+        <title>Git / Github</title>
         <link rel="stylesheet" href="../stiler/stilark.css">
         <link rel="stylesheet" media="print" href="../stiler/print.css">
     </head>
@@ -16,8 +16,8 @@
                 <div class="dropdown">
                     <p>Oblig 2</p>
                     <div class="dropdown-knapper">
-                        <a href="mal-artikkel.html">Mal for artikkel</a>
                         <a href="Wireframe.html">Wireframe</a>
+                        <a href="mal-artikkel.html">Mal for artikkel</a>
                         <a href="git-github.html">Git / Github</a>
                         <a href="media-typer.html">Media Typer</a>
                         <a href="css-layouts.html">CSS Layouts</a>
@@ -57,22 +57,45 @@
                             <p><time datetime="2018-10-03">3. oktober 2018</time></p>
                             <h2>Hva er git?</h2>
                             <p>
-                            
+                                Git er et versjonskontrollsystem<a href="#kilde1" class="artikkel-sitering">[1]</a>. Det ble utviklet av Linus Torvalds i 2005,
+                                og er i dag det mest brukte versjonskontrollsystemet i verden<a href="#kilde1" class="artikkel-sitering">[1]</a><a href="#kilde2" class="artikkel-sitering">[2]</a>.
+                                Et versjonskontrollsystem er et system som tar vare på eldre versjoner av et prosjekt.
+                                Dette gjør det enkelt for utviklere å se endringer i prosjektet, og gå tilbake til
+                                tidligere versjoner av prosjektet i tilfelle den nye koden ikke fungerer som den skal<a class="artikkel-sitering">[3]</a>.
+                            </p>
+                            <p>
+                                Når en person i en gruppe vil gjøre en endring på et prosjekt, blir det laget en kopi
+                                av den delen av koden som skal endres som personen kan arbeide med uten å gjøre
+                                endringer i hovedkoden. Når koden fungerer som den skal, kan den slås sammen
+                                med resten av koden<a href="#kilde3" class="artikkel-sitering">[3]</a>.
                             </p>
                             <h2>Github</h2>
                             <p>
+                                GitHub er et selskap som tilbyr lagringsplass for git-prosjekter<a href="#kilde3" class="artikkel-sitering">[3]</a>.
+                                Prosjekter som bruker git, lagres i noe som kalles git-repositories<a href="#kilde1" class="artikkel-sitering">[1]</a>.
+                                Github-brukere kan opprette åpne git-repositories på Github sine servere<a href="#kilde3" class="artikkel-sitering">[3]</a>.
+                                Github brukes hovedsakelig av programutviklere, men det er ingenting i veien
+                                for å bruke GitHub som en vanlig skylagringstjeneste hvor man oppbevarer
+                                versjoner av vanlige tekstdokumenter eller bilder<a href="#kilde1" class="artikkel-sitering">[1]</a>.
+                            </p>
+                            <p>
+                                I denne oppgaven har jeg lastet opp filene for denne obligen i en git-repository.
+                                <a class="link" href="https://github.com/larsmra/oblig2.git" target="_blank">Repositoriet kan du finne ved å klikke her</a>. Personlig mener jeg at Git er et bra værktøy
+                                for utviklere, spesielt hvis man er en stor gruppe som jobber med et stort prosjekt,
+                                da det ellers hadde vært vanskelig å holde styr på alle oppdateringene som blir gjort.
                             </p>
                         </div>
                         <figure class="artikkel-bilde">
-                            <img src="../bilder/" alt="">
-                            <figcaption><a class="link" href=""></a></figcaption>
+                            <img src="../bilder/git-repository.png" alt="De siste committene jeg gjorde i GitHub.">
+                            <figcaption>Bilde av de siste committene jeg gjorde i GitHub.</figcaption>
                         </figure>
                     </section>
                     <section class="artikkel-kilder">
                         <h2>Referanseliste</h2>
                         <ol>
-                            <li><a class="link" href="">Kilde 1</a></li>
-                            <li><a class="link" href="">Kilde 2</a></li>
+                            <li id="kilde1" class="artikkel-kilde">Brown, Korbin. <time datetime="2016-09-21">(21. september 2016)</time>. <a class="link" href="https://www.howtogeek.com/180167/htg-explains-what-is-github-and-what-do-geeks-use-it-for/">What is GitHub, and What Is It Used For?</a> Hentet <time datetime="2018-10-03">3. oktober 2018</time></li>
+                            <li id="kilde2" class="artikkel-kilde">Ngan, Kayla. <time datetime="2018-05-04">(4. mai 2018)</time>. <a class="link" href="https://docs.microsoft.com/en-us/azure/devops/learn/git/what-is-git">What is Git?</a> Hentet <time datetime="2018-10-03">3. oktober 2018</time></li>
+                            <li id="kilde3" class="artikkel-kilde">Kinsta. <time datetime="2018-08-20">(20. august 2018)</time>. <a class="link" href="https://kinsta.com/knowledgebase/what-is-github/#">What Is GitHub? A Beginner's Introduction to GitHub.</a> Hentet <time datetime="2018-10-03">3. oktober 2018</time></li>
                         </ol>
                     </section>
                 </article>

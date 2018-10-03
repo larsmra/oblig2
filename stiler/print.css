@@ -1,3 +1,4 @@
+/* CSS for utskrifter */
 @media print {
     * {
         margin: 0;
@@ -13,7 +14,7 @@
     img {
         max-width: 100%;
     }
-    .artikkel-kilder {
+    figure {
         margin: 20px auto 20px auto;
         text-align: center;
         width: 280px;
